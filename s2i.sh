@@ -16,7 +16,7 @@ export PATH=$PATH:${CHE_PROJECTS_ROOT}/quarkus-time-table/oc_client
 
 cd ${CHE_PROJECTS_ROOT}/quarkus-time-table 
 
-oc login -u devadmin -p devadmin --server=https://api.cluster-ea09.ea09.example.opentlc.com:6443 
+oc login -u devadmin -p devadmin --server=https://api.cluster-ea09.ea09.example.opentlc.com:6443  --insecure-skip-tls-verify=true  > /dev/null 2>&1
 
 ./mvnw quarkus:add-extension -Dextensions="openshift" 
 
