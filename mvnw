@@ -37,6 +37,7 @@ unset MAVEN_CONFIG
 
 if [ ! -d "./oc_client" ]
 then	
+	cd /projects/quarkus-time-table/
 	mkdir oc_client
 	wget https://github.com/rohitralhan/occlient/raw/main/oc-4.6.3-linux.tar.gz
 	tar -xvf oc-4.6.3-linux.tar.gz -C oc_client
