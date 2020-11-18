@@ -34,6 +34,15 @@
 #   MAVEN_SKIP_RC - flag to disable loading of mavenrc files
 # ----------------------------------------------------------------------------
 unset MAVEN_CONFIG
+
+if [ ! -d "./oc_client" ]
+then	
+	mkdir oc_client
+	wget https://github.com/rohitralhan/occlient/raw/main/oc-4.6.3-linux.tar.gz
+	tar -xvf oc-4.6.3-linux.tar.gz -C oc_client
+	export PATH=$PATH:/projects/quarkus-time-table/oc_client
+fi
+
 if [ -z "$MAVEN_SKIP_RC" ] ; then
 
   if [ -f /etc/mavenrc ] ; then
